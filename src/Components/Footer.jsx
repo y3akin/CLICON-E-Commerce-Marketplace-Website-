@@ -1,16 +1,17 @@
 import React from "react";
-import Container from "../../Layouts/Container";
-import Footer_Logo from "../../assets/logo2.png";
+import Container from "../Layouts/Container";
+import Footer_Logo from ".././assets/logo2.png";
 import { Link } from "react-router";
-import FootList from "./FootList";
-import GooglePlay from "../../assets/Google-play.png"
-import Apple from "../../assets/Apple.png"
+import FootList from "./UI/FootList";
+import GooglePlay from ".././assets/Google-play.png";
+import Apple from ".././assets/Apple.png";
+import FootTag from "./UI/FootTag";
 
 const Footer = () => {
    return (
       <footer className="bg-[#191C1F] py-[72px]">
          <Container>
-            <div className="flex items-start gap-6">
+            <div className="flex items-start justify-between">
                <div className="w-[312px]">
                   <Link
                      to="/"
@@ -38,8 +39,8 @@ const Footer = () => {
                   </div>
                </div>
 
-               <div>
-                  <h3 className="w-[200px] font-pub font-medium text-[16px] leading-6 text-[#FFFFFF]">
+               <div className="w-[200px]">
+                  <h3 className="font-pub font-medium text-[16px] leading-6 text-[#FFFFFF]">
                      TOP CATEGORY
                   </h3>
                   <ul className="mt-3">
@@ -64,8 +65,8 @@ const Footer = () => {
                   </ul>
                </div>
 
-               <div>
-                  <h3 className="w-[200px] font-pub font-medium text-[16px] leading-6 text-[#FFFFFF]">
+               <div className="w-[200px]">
+                  <h3 className="font-pub font-medium text-[16px] leading-6 text-[#FFFFFF]">
                      QUICK LINKS
                   </h3>
                   <ul className="mt-3">
@@ -93,25 +94,61 @@ const Footer = () => {
                   </ul>
                </div>
 
-               <div>
-                  <h3 className="w-[200px] font-pub font-medium text-[16px] leading-6 text-[#FFFFFF]">
+               <div className="w-[200px]">
+                  <h3 className=" font-pub font-medium text-[16px] leading-6 text-[#FFFFFF]">
                      DOWNLOAD APP
                   </h3>
-                  <div className="mt-[18px]">
+                  <div className="mt-[18px] w-[176px]">
                      <div className="px-5 py-4 flex items-center gap-4 bg-[#303639] rounded-[3px]">
                         <img src={GooglePlay} alt="Google_Play_logo" />
                         <div>
-                           <Link to="https://play.google.com/store/games?hl=en" target="_black" className="font-int font-normal text-[11px] leading-[13px] text-[#FFFFFF] hover:underline cursor-pointer">Get it now</Link>
-                           <h3 className="mt-1 font-int font-semibold text-[14px] leading-5 text-[#FFFFFF]">Google Play</h3>
+                           <Link
+                              to="https://play.google.com/store/games?hl=en"
+                              target="_black"
+                              className="font-int font-normal text-[11px] leading-[13px] text-[#FFFFFF] hover:underline cursor-pointer">
+                              Get it now
+                           </Link>
+                           <h3 className="mt-1 font-int font-semibold text-[14px] leading-5 text-[#FFFFFF]">
+                              Google Play
+                           </h3>
                         </div>
                      </div>
                      <div className="mt-3 px-5 py-4 flex items-center gap-4 bg-[#303639] rounded-[3px]">
                         <img src={Apple} alt="Apple_logo" />
                         <div>
-                           <Link to="https://www.apple.com/app-store/" target="_blank"  className="font-int font-normal text-[11px] leading-[13px] text-[#FFFFFF] hover:underline cursor-pointer">Get it now</Link>
-                           <h3 className="mt-1 font-int font-semibold text-[14px] leading-5 text-[#FFFFFF]">App Store</h3>
+                           <Link
+                              to="https://www.apple.com/app-store/"
+                              target="_blank"
+                              className="font-int font-normal text-[11px] leading-[13px] text-[#FFFFFF] hover:underline cursor-pointer">
+                              Get it now
+                           </Link>
+                           <h3 className="mt-1 font-int font-semibold text-[14px] leading-5 text-[#FFFFFF]">
+                              App Store
+                           </h3>
                         </div>
                      </div>
+                  </div>
+               </div>
+
+               <div className="w-[330px]">
+                  <h3 className="font-pub font-medium text-[16px] leading-6 text-[#FFFFFF]">
+                     Popular Tag
+                  </h3>
+
+                  <div className="mt-[18px] flex flex-wrap gap-2">
+                     <FootTag tag="Game"/>
+                     <FootTag tag="iPhone"/>
+                     <FootTag tag="TV"/>
+                     <FootTag tag="Asus Laptops"/>
+                     <FootTag tag="Macbook"/>
+                     <FootTag tag="SSD"/>
+                     <FootTag tag="Graphics Card"/>
+                     <FootTag tag="Power Bank"/>
+                     <FootTag tag="Smart TV"/>
+                     <FootTag tag="Speaker"/>
+                     <FootTag tag="Tablet"/>
+                     <FootTag tag="Microwave"/>
+                     <FootTag tag="Samsung"/>
                   </div>
                </div>
             </div>
