@@ -3,6 +3,8 @@ import Container from "../../Layouts/Container";
 import Footer_Logo from "../../assets/logo2.png";
 import { Link } from "react-router";
 import FootList from "./FootList";
+import GooglePlay from "../../assets/Google-play.png"
+import Apple from "../../assets/Apple.png"
 
 const Footer = () => {
    return (
@@ -95,8 +97,21 @@ const Footer = () => {
                   <h3 className="w-[200px] font-pub font-medium text-[16px] leading-6 text-[#FFFFFF]">
                      DOWNLOAD APP
                   </h3>
-                  <div>
-                     <div></div>
+                  <div className="mt-[18px]">
+                     <div className="px-5 py-4 flex items-center gap-4 bg-[#303639] rounded-[3px]">
+                        <img src={GooglePlay} alt="Google_Play_logo" />
+                        <div>
+                           <Link to="https://play.google.com/store/games?hl=en" target="_black" className="font-int font-normal text-[11px] leading-[13px] text-[#FFFFFF] hover:underline cursor-pointer">Get it now</Link>
+                           <h3 className="mt-1 font-int font-semibold text-[14px] leading-5 text-[#FFFFFF]">Google Play</h3>
+                        </div>
+                     </div>
+                     <div className="mt-3 px-5 py-4 flex items-center gap-4 bg-[#303639] rounded-[3px]">
+                        <img src={Apple} alt="Apple_logo" />
+                        <div>
+                           <Link to="https://www.apple.com/app-store/" target="_blank"  className="font-int font-normal text-[11px] leading-[13px] text-[#FFFFFF] hover:underline cursor-pointer">Get it now</Link>
+                           <h3 className="mt-1 font-int font-semibold text-[14px] leading-5 text-[#FFFFFF]">App Store</h3>
+                        </div>
+                     </div>
                   </div>
                </div>
             </div>
