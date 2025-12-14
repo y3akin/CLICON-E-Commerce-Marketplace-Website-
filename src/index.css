@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@theme {
+   --font-pub: "Public Sans", sans-serif;
+   --font-int: "Inter", sans-serif;
+}
+
+
+
+
+
+.custom-dots li.slick-active div {
+   background-color: #000000 !important;
+}
+.custom-dots li div:hover {
+   background-color: #000000;
+}
+.slick-slider,
+.slick-list,
+.slick-track {
+  position: relative;
+  z-index: 1;
+}
