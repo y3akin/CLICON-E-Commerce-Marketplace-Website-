@@ -3,6 +3,7 @@ import Container from "../../Layouts/Container";
 import { FaArrowRight } from "react-icons/fa";
 import Banner_Img1 from "../../assets/Banner/img1.png";
 import Banner_Img2 from "../../assets/Banner/img2.png";
+import { Link } from "react-router";
 
 const Banner = () => {
    return (
@@ -22,9 +23,9 @@ const Banner = () => {
                         unexpectedly.
                      </h3>
 
-                     <button className="w-[156px] justify-center rounded-xs mt-8 bg-[#FA8232] flex items-center gap-2 text-[#FFFFFF] font-pub font-bold text-[14px] leading-12 tracking-[1.2%] cursor-pointer hover:bg-[#f86909] transition-all duration-200">
+                     <Link to="shop" className="w-[156px] justify-center rounded-xs mt-8 bg-[#FA8232] flex items-center gap-2 text-[#FFFFFF] font-pub font-bold text-[14px] leading-12 tracking-[1.2%] cursor-pointer hover:bg-[#f86909] transition-all duration-200">
                         Shop Now <FaArrowRight />
-                     </button>
+                     </Link>
                   </div>
                   <img src={Banner_Img1} alt="Banner_Img1" />
                </div>
@@ -42,9 +43,9 @@ const Banner = () => {
                         measurment.
                      </h3>
 
-                     <button className="w-[156px] justify-center rounded-xs mt-8 bg-[#FA8232] flex items-center gap-2 text-[#FFFFFF] font-pub font-bold text-[14px] leading-12 tracking-[1.2%] cursor-pointer hover:bg-[#f86909] transition-all duration-200">
+                     <Link to="shop" className="w-[156px] justify-center rounded-xs mt-8 bg-[#FA8232] flex items-center gap-2 text-[#FFFFFF] font-pub font-bold text-[14px] leading-12 tracking-[1.2%] cursor-pointer hover:bg-[#f86909] transition-all duration-200">
                         Shop Now <FaArrowRight />
-                     </button>
+                     </Link>
                   </div>
                   <div className="relative z-9999 mt-[31px]">
                      <img src={Banner_Img2} alt="Banner_Img2" />

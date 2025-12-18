@@ -22,11 +22,13 @@ const Shop = () => {
          [id]: !prev[id],
       }));
    };
+
+   
    return (
       <section>
          <div className="bg-[#F2F4F5] py-[26px]">
             <div className="w-[1320px] mx-auto flex items-center gap-2">
-               <Link to="/" className="font-int text-[14px] text-[#666666] leading-5 flex items-center gap-2"> <IoHomeOutline/>  Home</Link>
+               <Link to="/" className="font-int text-[14px] text-[#666666] leading-5 flex items-center gap-2 hover:underline hover:text-[#2DA5F3] transition-all duration-300"> <IoHomeOutline/>  Home</Link>
                <MdKeyboardArrowRight className="text-[14px] text-[#666666]"/>
                <Link className="font-int text-[14px] text-[#2DA5F3] leading-5">Shop</Link>
             </div>

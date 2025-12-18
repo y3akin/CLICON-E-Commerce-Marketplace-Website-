@@ -3,7 +3,6 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import "./index.css";
-import App from "./App.jsx";
 import RootLayouts from "./Layouts/RootLayouts.jsx";
 import Registration from "./Pages/Registration.jsx";
 import Info from "./Pages/Info.jsx";
@@ -13,13 +12,14 @@ import TrackOrder from "./Pages/TrackOrder.jsx";
 import Compare from "./Pages/Compare.jsx";
 import CustomerSupport from "./Pages/CustomerSupport.jsx";
 import Shop from "./Pages/Shop.jsx";
+import Home from "./Pages/Home.jsx";
 
 const router = createBrowserRouter([
    {
       path: "/",
       Component: RootLayouts,
       children: [
-         { index: true, Component: App },
+         { index: true, Component: Home },
          { path: "trackorder", Component: TrackOrder },
          { path: "compare", Component: Compare },
          { path: "customersupport", Component: CustomerSupport },
