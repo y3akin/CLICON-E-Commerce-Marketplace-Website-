@@ -44,9 +44,9 @@ const Products = () => {
                         </h3>
                      </div>
                   </div>
-                  <button className="w-[191px] mx-auto justify-center rounded-xs mt-8 bg-[#FA8232] flex items-center gap-2 text-[#FFFFFF] font-pub font-bold text-[16px] leading-14 tracking-[1.2%] cursor-pointer hover:bg-[#f86909] transition-all duration-200">
+                  <Link to="shop" className="w-[191px] mx-auto justify-center rounded-xs mt-8 bg-[#FA8232] flex items-center gap-2 text-[#FFFFFF] font-pub font-bold text-[16px] leading-14 tracking-[1.2%] cursor-pointer hover:bg-[#f86909] transition-all duration-200">
                      Shop Now <FaArrowRight />
-                  </button>
+                  </Link>
                   <img src={Pdt_Img} alt="Pdt_Img" />
                </div>
                <div className="w-[984px]">
@@ -64,7 +64,7 @@ const Products = () => {
                            <PdtNavList pdtList={"TV"} />
                         </ul>
                         <div className="flex items-center gap-2 cursor-pointer font-pub font-semibold text-[14px] leading-5 text-[#FA8232] hover:underline">
-                           <Link>Browse All Product</Link>
+                           <Link to="shop" >Browse All Product</Link>
                            <FaArrowRight />
                         </div>
                      </div>

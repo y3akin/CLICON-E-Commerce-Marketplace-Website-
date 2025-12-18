@@ -12,6 +12,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 import { BsBoxSeam } from "react-icons/bs";
 import { PiTrophyLight, PiCreditCard, PiHeadphonesLight } from "react-icons/pi";
+import { Link } from "react-router";
 
 const Header = () => {
    const settings = {
@@ -53,9 +54,9 @@ const Header = () => {
                                  Save up to 50% on select Xbox games. Get 3
                                  months of PC Game Pass for $2 USD.
                               </p>
-                              <button className="w-[190px] justify-center rounded-xs mt-5 bg-[#FA8232] flex items-center gap-2 text-[#FFFFFF] font-pub font-bold text-[16px] leading-14 tracking-[1.2%] cursor-pointer hover:bg-[#f86909] transition-all duration-200">
+                              <Link to="shop" className="w-[190px] justify-center rounded-xs mt-5 bg-[#FA8232] flex items-center gap-2 text-[#FFFFFF] font-pub font-bold text-[16px] leading-14 tracking-[1.2%] cursor-pointer hover:bg-[#f86909] transition-all duration-200">
                                  Shop Now <FaArrowRight />
-                              </button>
+                              </Link>
                            </div>
                            <div className="w-[368px] relative">
                               <img src={Header_Img1} alt="Header_Img1" />
@@ -79,9 +80,9 @@ const Header = () => {
                                  camera, and sleek design for seamless
                                  performance.
                               </p>
-                              <button className="w-[190px] justify-center rounded-xs mt-5 bg-[#FA8232] flex items-center gap-2 text-[#FFFFFF] font-pub font-bold text-[16px] leading-14 tracking-[1.2%] cursor-pointer hover:bg-[#f86909] transition-all duration-200">
+                              <Link to="shop" className="w-[190px] justify-center rounded-xs mt-5 bg-[#FA8232] flex items-center gap-2 text-[#FFFFFF] font-pub font-bold text-[16px] leading-14 tracking-[1.2%] cursor-pointer hover:bg-[#f86909] transition-all duration-200">
                                  Shop Now <FaArrowRight />
-                              </button>
+                              </Link>
                            </div>
                            <div className="w-[368px] relative">
                               <img src={Header_Img4} alt="Header_Img1" />
@@ -102,9 +103,9 @@ const Header = () => {
                                  earbuds with active noise cancellation and
                                  immersive sound.
                               </p>
-                              <button className="w-[190px] justify-center rounded-xs mt-5 bg-[#FA8232] flex items-center gap-2 text-[#FFFFFF] font-pub font-bold text-[16px] leading-14 tracking-[1.2%] cursor-pointer hover:bg-[#f86909] transition-all duration-200">
+                              <Link to="shop" className="w-[190px] justify-center rounded-xs mt-5 bg-[#FA8232] flex items-center gap-2 text-[#FFFFFF] font-pub font-bold text-[16px] leading-14 tracking-[1.2%] cursor-pointer hover:bg-[#f86909] transition-all duration-200">
                                  Shop Now <FaArrowRight />
-                              </button>
+                              </Link>
                            </div>
                            <div className="w-[368px] relative z-9999">
                               <img
@@ -130,9 +131,9 @@ const Header = () => {
                         <h3 className="mt-[5px] font-pub font-semibold text-[24px] leading-8 text-[#FFFFFF]">
                            New Google Pixel 6 Pro
                         </h3>
-                        <button className="w-[156px] justify-center rounded-xs mt-5 bg-[#FA8232] flex items-center gap-2 text-[#FFFFFF] font-pub font-bold text-[16px] leading-14 tracking-[1.2%] cursor-pointer hover:bg-[#f86909] transition-all duration-200">
+                        <Link to="shop" className="w-[156px] justify-center rounded-xs mt-5 bg-[#FA8232] flex items-center gap-2 text-[#FFFFFF] font-pub font-bold text-[16px] leading-14 tracking-[1.2%] cursor-pointer hover:bg-[#f86909] transition-all duration-200">
                            Shop Now <FaArrowRight />
-                        </button>
+                        </Link>
                      </div>
 
                      <div className="w-[236px] pt-3 relative">
@@ -156,9 +157,9 @@ const Header = () => {
                         <h3 className="mt-3 font-pub font-semibold text-[18px] leading-4 text-[#2DA5F3]">
                            $299 USD
                         </h3>
-                        <button className="w-[156px] justify-center rounded-xs mt-5 bg-[#FA8232] flex items-center gap-2 text-[#FFFFFF] font-pub font-bold text-[16px] leading-14 tracking-[1.2%] cursor-pointer hover:bg-[#f86909] transition-all duration-200">
+                        <Link to="shop" className="w-[156px] justify-center rounded-xs mt-5 bg-[#FA8232] flex items-center gap-2 text-[#FFFFFF] font-pub font-bold text-[16px] leading-14 tracking-[1.2%] cursor-pointer hover:bg-[#f86909] transition-all duration-200">
                            Shop Now <FaArrowRight />
-                        </button>
+                        </Link>
                      </div>
                   </div>
                </div>

@@ -12,6 +12,7 @@ import ProductProvider from "./Context/ProductContext.jsx";
 import TrackOrder from "./Pages/TrackOrder.jsx";
 import Compare from "./Pages/Compare.jsx";
 import CustomerSupport from "./Pages/CustomerSupport.jsx";
+import Shop from "./Pages/Shop.jsx";
 
 const router = createBrowserRouter([
    {
@@ -23,6 +24,7 @@ const router = createBrowserRouter([
          { path: "compare", Component: Compare },
          { path: "customersupport", Component: CustomerSupport },
          { path: "info", Component: Info },
+         { path: "shop", Component: Shop },
       ],
    },
    {

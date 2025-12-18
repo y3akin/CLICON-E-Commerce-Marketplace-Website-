@@ -236,7 +236,7 @@ const NavBar = () => {
                                  ? "bg-[#FA8232] text-white hover:bg-[#FA8232] hover:text-white"
                                  : ""
                            }`}>
-                           <button className={`flex items-center gap-2`}>
+                           <button className={`flex items-center gap-2 cursor-pointer`}>
                               All Category
                               <IoIosArrowDown
                                  className={`${
