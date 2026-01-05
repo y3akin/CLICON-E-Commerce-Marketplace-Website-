@@ -1,12 +1,12 @@
 import React from "react";
 import Slider from "react-slick";
 
-import CatgImg1 from "../../assets/Categorys/CatgImg1.png";
-import CatgImg2 from "../../assets/Categorys/CatgImg2.png";
-import CatgImg3 from "../../assets/Categorys/CatgImg3.png";
-import CatgImg4 from "../../assets/Categorys/CatgImg4.png";
-import CatgImg5 from "../../assets/Categorys/CatgImg5.png";
-import CatgImg6 from "../../assets/Categorys/CatgImg6.png";
+import CatgImg1 from "../../assets/Categorys/img1.png";
+import CatgImg2 from "../../assets/Categorys/img2.png";
+import CatgImg3 from "../../assets/Categorys/img3.png";
+import CatgImg4 from "../../assets/Categorys/img4.png";
+import CatgImg5 from "../../assets/Categorys/img5.png";
+import CatgImg6 from "../../assets/Categorys/img6.png";
 import Container from "../../Layouts/Container";
 
 import { IoArrowBackOutline, IoArrowForward } from "react-icons/io5";

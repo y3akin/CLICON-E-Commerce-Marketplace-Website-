@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import Container from "../../Layouts/Container";
-import Pdt_Img from "../../assets/Products/pdt_img.jpg";
+import Pdt_Img from "../../assets/Products/img1.jpg";
 import { FaArrowRight } from "react-icons/fa";
 import PdtNavList from "../../Components/UI/PdtNavList";
 import { Link } from "react-router";

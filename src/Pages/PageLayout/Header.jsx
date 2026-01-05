@@ -1,10 +1,10 @@
 import React from "react";
 import Container from "../../Layouts/Container";
 import { FaArrowRight } from "react-icons/fa";
-import Header_Img1 from "../../assets/Header/Header_img1.png";
-import Header_Img2 from "../../assets/Header/Header_img2.png";
-import Header_Img3 from "../../assets/Header/Header_img3.png";
-import Header_Img4 from "../../assets/Header/Header_img4.png";
+import Header_Img1 from "../../assets/Header/img1.png";
+import Header_Img2 from "../../assets/Header/img2.png";
+import Header_Img3 from "../../assets/Header/img3.png";
+import Header_Img4 from "../../assets/Header/img4.png";
 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
