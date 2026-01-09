@@ -14,6 +14,7 @@ import CustomerSupport from "./Pages/CustomerSupport.jsx";
 import Shop from "./Pages/Shop.jsx";
 import Home from "./Pages/Home.jsx";
 import Cart from "./Pages/Cart.jsx";
+import CheckOut from "./Pages/CheckOut.jsx";
 
 const router = createBrowserRouter([
    {
@@ -27,6 +28,7 @@ const router = createBrowserRouter([
          { path: "info", Component: Info },
          { path: "shop", Component: Shop },
          { path: "cart", Component: Cart },
+         { path: "checkout", Component: CheckOut },
       ],
    },
    {

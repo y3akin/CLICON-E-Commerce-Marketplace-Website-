@@ -210,7 +210,7 @@ const Shop = () => {
                 >
                   <div className="w-[202px] h-[172px] relative group">
                     <img src={item.images[0]} alt={item.title} className="h-[172px] p-2 mx-auto" />
-                    <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 hover:bg-[#00000020] transition-opacity duration-300">
                       <div
                         className={`w-12 h-12 rounded-full flex items-center justify-center cursor-pointer ${
                           favIcon[item.id] ? "bg-[#FA8232] text-white" : "bg-white text-mtext hover:bg-[#FA8232] hover:text-white"
