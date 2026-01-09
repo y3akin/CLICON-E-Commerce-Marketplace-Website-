@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 import Container from "../../Layouts/Container";
 import Flex from "./Flex";
 import Logo from "../../assets/logo.png";
@@ -138,7 +138,7 @@ const NavBar = () => {
 
                   {/* shop & login icon */}
                   <div className="flex items-center gap-6 relative">
-                     <MdOutlineShoppingCart className="text-[32px] cursor-pointer hover:text-[#a3c3ca] transition-all duration-200" />
+                     <Link to="/cart"><MdOutlineShoppingCart className="text-[32px] cursor-pointer hover:text-[#a3c3ca] transition-all duration-200" /></Link>
                      <FaRegHeart className="text-[32px] cursor-pointer hover:text-[#a3c3ca] transition-all duration-200" />
                      <AiOutlineUser
                         className="text-[32px] cursor-pointer hover:text-[#a3c3ca] transition-all duration-200"

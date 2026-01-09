@@ -12,7 +12,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 import { BsBoxSeam } from "react-icons/bs";
 import { PiTrophyLight, PiCreditCard, PiHeadphonesLight } from "react-icons/pi";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 
 const Header = () => {
    const settings = {

@@ -1,7 +1,7 @@
 import React from "react";
 import Container from "../Layouts/Container";
 import Footer_Logo from ".././assets/logo2.png";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 import FootList from "./UI/FootList";
 import GooglePlay from ".././assets/Google-play.png";
 import Apple from ".././assets/Apple.png";

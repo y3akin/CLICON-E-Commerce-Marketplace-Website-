@@ -3,7 +3,7 @@ import Container from "../../Layouts/Container";
 import { FaArrowRight } from "react-icons/fa";
 import Banner_Img1 from "../../assets/Banner/img1.png";
 import Banner_Img2 from "../../assets/Banner/img2.png";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 
 const Banner = () => {
    return (

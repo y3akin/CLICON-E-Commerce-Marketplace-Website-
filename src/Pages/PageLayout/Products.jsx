@@ -3,14 +3,18 @@ import Container from "../../Layouts/Container";
 import Pdt_Img from "../../assets/Products/img1.jpg";
 import { FaArrowRight } from "react-icons/fa";
 import PdtNavList from "../../Components/UI/PdtNavList";
-import { Link } from "react-router";
-import { ProductProvider } from "../../Context/ProductContext";
+import { Link } from "react-router-dom";
+import { ProductContext } from "../../Context/ProductContext";
 import { IoStar, IoStarHalf } from "react-icons/io5";
 import { GoHeart, GoHeartFill } from "react-icons/go";
 import { FiShoppingCart, FiEye } from "react-icons/fi";
 
 const Products = () => {
-   let pdt = useContext(ProductProvider);
+   let { product, addToCart } = useContext(ProductContext);
+
+   const handleaddToCart = (item) => {
+      addToCart(item);
+   }
 
    let [favIcon, setFavIcon] = useState({});
    const toggleFav = (id) => {
@@ -29,17 +33,17 @@ const Products = () => {
                      <h5 className="font-pub font-semibold text-[14px] leading-5 text-[#BE4646]">
                         COMPUTER & ACCESSORIES
                      </h5>
-                     <h5 className="mt-2 font-pub font-semibold text-[32px] leading-10 text-[#191C1F]">
+                     <h5 className="mt-2 font-pub font-semibold text-[32px] leading-10 text-mtext">
                         32% Discount
                      </h5>
                      <h5 className="mt-3 font-pub font-normal text-[16px] leading-6 text-[#475156]">
                         For all ellectronics products
                      </h5>
                      <div className="flex items-center gap-2 mt-4">
-                        <h3 className="font-int font-normal text-[14px] leading-5 text-[#191C1F]">
+                        <h3 className="font-int font-normal text-[14px] leading-5 text-mtext">
                            Offers ends in:
                         </h3>
-                        <h3 className="font-pub font-semibold text-[14px] leading-5 text-[#191C1F] py-1.5 px-2.5 bg-[#FFFFFF] rounded-xs">
+                        <h3 className="font-pub font-semibold text-[14px] leading-5 text-mtext py-1.5 px-2.5 bg-[#FFFFFF] rounded-xs">
                            ENDS OF CHRISTMAS
                         </h3>
                      </div>
@@ -51,7 +55,7 @@ const Products = () => {
                </div>
                <div className="w-[984px]">
                   <div className="flex items-center justify-between">
-                     <h2 className="font-pub font-semibold text-[24px] leading-8 text-[#191C1F]">
+                     <h2 className="font-pub font-semibold text-[24px] leading-8 text-mtext">
                         Featured Products
                      </h2>
 
@@ -71,7 +75,7 @@ const Products = () => {
                   </div>
 
                   <div className=" grid grid-cols-4 gap-4 mt-6">
-                     {pdt.slice(2,10).map((item, idx) => (
+                     {product.slice(2,10).map((item, idx) => (
                         <div
                            key={idx}
                            className="h-80 max-w-[234px] outline-0 bg-[#FFFFFF] border border-[#E4E7E9] rounded-sm p-4  hover:shadow-[0px_8px_24px_0px_rgba(25,28,31,0.12)] transition-all duration-300 cursor-pointer flex flex-col ">
@@ -87,7 +91,7 @@ const Products = () => {
                                        ${
                                           favIcon[item.id]
                                              ? "bg-[#FA8232] text-white"
-                                             : "bg-white text-[#191C1F] hover:bg-[#FA8232] hover:text-white"
+                                             : "bg-white text-mtext hover:bg-[#FA8232] hover:text-white"
                                        } opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
                                     onClick={() => toggleFav(item.id)}>
                                     {favIcon[item.id] ? (
@@ -97,10 +101,10 @@ const Products = () => {
                                     )}
                                  </div>
 
-                                 <div className="w-12 h-12 inset-0 bg-white text-[#191C1F] rounded-full flex items-center justify-center hover:bg-[#FA8232] hover:text-white  opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                    <FiShoppingCart className="text-[24px] mx-auto my-auto cursor-pointer" />
+                                 <div className="w-12 h-12 inset-0 bg-white text-mtext rounded-full flex items-center justify-center hover:bg-[#FA8232] hover:text-white  opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <FiShoppingCart onClick={() => handleaddToCart(item)} className="text-[24px] mx-auto my-auto cursor-pointer" />
                                  </div>
-                                 <div className="w-12 h-12 inset-0 bg-white text-[#191C1F] rounded-full flex items-center justify-center hover:bg-[#FA8232] hover:text-white  opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                 <div className="w-12 h-12 inset-0 bg-white text-mtext rounded-full flex items-center justify-center hover:bg-[#FA8232] hover:text-white  opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                     <FiEye className="text-[24px] mx-auto my-auto cursor-pointer" />
                                  </div>
                               </div>
@@ -120,10 +124,10 @@ const Products = () => {
                                  </h3>
                               </div>
 
-                              <h3 className="mt-2 font-pub font-normal text-[14px] leading-5 text-[#191C1F] line-clamp-2 text-start">
+                              <h3 className="mt-2 font-pub font-normal text-[14px] leading-5 text-mtext line-clamp-2 text-start">
                                  {item.title}
                               </h3>
-                              <div className="flex items-center gap-[2px]">
+                              <div className="flex items-center gap-0.5">
                                  <del className="mt-2 font-pub font-normal text-[14px] leading-5 text-[#929FA5] text-start">
                                  ${item.price}
                               </del>

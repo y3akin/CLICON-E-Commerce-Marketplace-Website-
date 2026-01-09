@@ -13,6 +13,7 @@ import Compare from "./Pages/Compare.jsx";
 import CustomerSupport from "./Pages/CustomerSupport.jsx";
 import Shop from "./Pages/Shop.jsx";
 import Home from "./Pages/Home.jsx";
+import Cart from "./Pages/Cart.jsx";
 
 const router = createBrowserRouter([
    {
@@ -25,6 +26,7 @@ const router = createBrowserRouter([
          { path: "customersupport", Component: CustomerSupport },
          { path: "info", Component: Info },
          { path: "shop", Component: Shop },
+         { path: "cart", Component: Cart },
       ],
    },
    {

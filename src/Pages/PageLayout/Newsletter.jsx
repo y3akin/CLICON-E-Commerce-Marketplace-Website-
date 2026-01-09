@@ -6,7 +6,7 @@ import NewStimg2 from "../../assets/Newsletter/img2.png"
 import NewStimg3 from "../../assets/Newsletter/img3.png"
 import NewStimg4 from "../../assets/Newsletter/img4.png"
 import NewStimg5 from "../../assets/Newsletter/img5.png"
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 
 const Newsletter = () => {
    return (
