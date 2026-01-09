@@ -284,8 +284,8 @@ const NavBar = () => {
                               ? "opacity-100 scale-y-100 py-3 w-60 rounded-[3px]"
                               : "opacity-0 scale-y-0 py-0 w-60"
                         }`}>
-                        <ListItems>Computer & Laptop</ListItems>
-                        <ListItems>Computer Accessories</ListItems>
+                        <Link to="/shop" onClick={() => setMore(false)}><ListItems>Computer & Laptop</ListItems></Link>
+                         <Link to="/shop" onClick={() => setMore(false)}> <ListItems>Computer Accessories</ListItems></Link>
                         <ListItems
                            className={`flex items-center justify-between ${
                               phoneMore
@@ -305,14 +305,14 @@ const NavBar = () => {
                               }`}
                            />
                         </ListItems>
-                        <ListItems>Headphone</ListItems>
-                        <ListItems>Mobile Accessories</ListItems>
-                        <ListItems>Gaming Console</ListItems>
-                        <ListItems>Camera & Photo</ListItems>
-                        <ListItems>TV & Homes Appliances</ListItems>
-                        <ListItems>Watchs & Accessories</ListItems>
-                        <ListItems>GPS & Navigation</ListItems>
-                        <ListItems>Warable Technology</ListItems>
+                        <Link to="/shop" onClick={() => setMore(false)}> <ListItems>Headphone</ListItems></Link>
+                       <Link to="/shop" onClick={() => setMore(false)}><ListItems>Mobile Accessories</ListItems></Link>
+                        <Link to="/shop" onClick={() => setMore(false)}><ListItems>Gaming Console</ListItems></Link>
+                        <Link to="/shop" onClick={() => setMore(false)}> <ListItems>Camera & Photo</ListItems></Link>
+                       <Link to="/shop" onClick={() => setMore(false)}><ListItems>TV & Homes Appliances</ListItems></Link>
+                        <Link to="/shop" onClick={() => setMore(false)}> <ListItems>Watchs & Accessories</ListItems></Link>
+                       <Link to="/shop" onClick={() => setMore(false)}><ListItems>GPS & Navigation</ListItems></Link>
+                        <Link to="/shop" onClick={() => setMore(false)}><ListItems>Warable Technology</ListItems></Link>                        
                      </ul>
 
                      <ul
@@ -334,7 +334,7 @@ const NavBar = () => {
                            "Infinix",
                            "Tecno",
                         ].map((item, i) => (
-                           <ListItems key={i}>{item}</ListItems>
+                           <Link to="/shop" onClick={() => setMore(false)}><ListItems key={i}>{item}</ListItems></Link>
                         ))}
                      </ul>
                   </div>

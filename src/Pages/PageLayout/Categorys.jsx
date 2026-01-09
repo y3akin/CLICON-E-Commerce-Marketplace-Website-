@@ -10,6 +10,7 @@ import CatgImg6 from "../../assets/Categorys/img6.png";
 import Container from "../../Layouts/Container";
 
 import { IoArrowBackOutline, IoArrowForward } from "react-icons/io5";
+import { Link } from "react-router";
 
 const Categorys = () => {
    let Catg = [
@@ -103,9 +104,7 @@ const Categorys = () => {
             <div className="w-[1250px] mx-auto text-center mt-10 ">
                <Slider {...settings}>
                   {Catg.map((item, idx) => (
-                     <div
-                        key={idx}
-                        className="h-[236px] max-w-[190px] outline-0 bg-[#FFFFFF] border border-[#E4E7E9] rounded-sm py-6 px-7 text-center hover:bg-[#E4E7E9] transition-all duration-300 cursor-pointer">
+                     <Link to="/shop" className="h-[236px] max-w-[190px] outline-0 bg-[#FFFFFF] border border-[#E4E7E9] rounded-sm py-6 px-7 text-center hover:bg-[#E4E7E9] transition-all duration-300 cursor-pointer" key={idx}>
                         <img
                            src={item.img}
                            alt={item.title}
@@ -114,7 +113,7 @@ const Categorys = () => {
                         <h4 className="mt-4 font-pub font-medium text-[16px] text-[#191C1F] leading-6">
                            {item.title}
                         </h4>
-                     </div>
+                     </Link>
                   ))}
                </Slider>
             </div>
