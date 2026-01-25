@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import "./index.css";
-import RootLayouts from "./Layouts/RootLayouts.jsx";
+import RootLayouts from "./Pages/PageLayout/RootLayouts.jsx";
 import Registration from "./Pages/Registration.jsx";
 import Info from "./Pages/Info.jsx";
 
@@ -15,6 +15,9 @@ import Shop from "./Pages/Shop.jsx";
 import Home from "./Pages/Home.jsx";
 import Cart from "./Pages/Cart.jsx";
 import CheckOut from "./Pages/CheckOut.jsx";
+import OrderSuccess from "./Pages/OrderSuccess.jsx";
+import ProductView from "./Pages/ProductView.jsx";
+import Favorites from "./Pages/Favorites.jsx";
 
 const router = createBrowserRouter([
    {
@@ -27,8 +30,11 @@ const router = createBrowserRouter([
          { path: "customersupport", Component: CustomerSupport },
          { path: "info", Component: Info },
          { path: "shop", Component: Shop },
+         { path: "product/:id", Component: ProductView },
+         { path: "favorites", Component: Favorites },
          { path: "cart", Component: Cart },
          { path: "checkout", Component: CheckOut },
+         { path: "ordersuccess", Component: OrderSuccess },
       ],
    },
    {

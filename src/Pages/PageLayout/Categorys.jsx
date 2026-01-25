@@ -92,25 +92,62 @@ const Categorys = () => {
       slidesToScroll: 1,
       nextArrow: <SampleNextArrow />,
       prevArrow: <SamplePrevArrow />,
+      responsive: [
+         {
+            breakpoint: 1280,
+            settings: {
+               slidesToShow: 5,
+               slidesToScroll: 1,
+            },
+         },
+         {
+            breakpoint: 1024,
+            settings: {
+               slidesToShow: 4,
+               slidesToScroll: 1,
+            },
+         },
+         {
+            breakpoint: 768,
+            settings: {
+               slidesToShow: 3,
+               slidesToScroll: 1,
+            },
+         },
+         {
+            breakpoint: 640,
+            settings: {
+               slidesToShow: 2,
+               slidesToScroll: 1,
+            },
+         },
+         {
+            breakpoint: 480,
+            settings: {
+               slidesToShow: 1,
+               slidesToScroll: 1,
+            },
+         },
+      ],
    };
 
    return (
       <section>
          <Container>
-            <h2 className="font-pub font-semibold text-[32px] leading-10 text[#191C1F] text-center">
+            <h2 className="font-pub font-semibold text-[24px] sm:text-[28px] md:text-[32px] leading-10 text[#191C1F] text-center">
                Shop with Categorys
             </h2>
 
-            <div className="w-[1250px] mx-auto text-center mt-10 ">
+            <div className="w-full mx-auto px-[20px] text-center mt-6 sm:mt-10">
                <Slider {...settings}>
                   {Catg.map((item, idx) => (
-                     <Link to="/shop" className="h-[236px] max-w-[190px] outline-0 bg-[#FFFFFF] border border-[#E4E7E9] rounded-sm py-6 px-7 text-center hover:bg-[#E4E7E9] transition-all duration-300 cursor-pointer" key={idx}>
+                     <Link to="/shop" className="h-[200px] sm:h-[236px] max-w-[150px] sm:max-w-[190px] outline-0 bg-[#FFFFFF] border border-[#E4E7E9] rounded-sm py-4 sm:py-6 px-4 sm:px-7 text-center hover:bg-[#E4E7E9] transition-all duration-300 cursor-pointer" key={idx}>
                         <img
                            src={item.img}
                            alt={item.title}
-                           className="w-[148px]  "
+                           className="w-[100px] sm:w-[148px] mx-auto"
                         />
-                        <h4 className="mt-4 font-pub font-medium text-[16px] text-[#191C1F] leading-6">
+                        <h4 className="mt-3 sm:mt-4 font-pub font-medium text-[12px] sm:text-[16px] text-[#191C1F] leading-6">
                            {item.title}
                         </h4>
                      </Link>

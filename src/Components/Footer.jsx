@@ -9,38 +9,38 @@ import FootTag from "./UI/FootTag";
 
 const Footer = () => {
    return (
-      <footer className="bg-[#191C1F] py-[72px]">
+      <footer className="bg-[#191C1F] py-[40px] sm:py-[72px] animate-fadeIn">
          <Container>
-            <div className="flex items-start justify-between">
-               <div className="w-[312px]">
+            <div className="flex flex-col sm:flex-row items-start justify-between gap-8 sm:gap-4">
+               <div className="w-full sm:w-[312px] animate-fadeInUp stagger-1">
                   <Link
                      to="/"
                      reloadDocument
-                     className="flex items-center gap-2">
-                     <img src={Footer_Logo} alt="CLICON" />
-                     <h2 className="font-pub font-bold text-[32px] leading-10 text-[#FFFFFF]">
+                     className="flex items-center gap-2 hover-scale transition-smooth">
+                     <img src={Footer_Logo} alt="CLICON" className="w-8" />
+                     <h2 className="font-pub font-bold text-[24px] sm:text-[32px] leading-10 text-[#FFFFFF]">
                         CLICON
                      </h2>
                   </Link>
 
                   <div className="mt-6">
-                     <h4 className="font-pub font-normal text-[14px] leading-5 text-[#77878F]">
+                     <h4 className="font-pub font-normal text-[12px] sm:text-[14px] leading-5 text-[#77878F]">
                         Customer Supports:
                      </h4>
-                     <h4 className=" mt-px font-pub font-medium text-[18px] leading-6 text-[#FFFFFF]">
+                     <h4 className=" mt-px font-pub font-medium text-[14px] sm:text-[18px] leading-6 text-[#FFFFFF] hover-brighten transition-smooth cursor-pointer">
                         (629) 555-0129
                      </h4>
-                     <h4 className="w-[248px] mt-3 font-pub font-normal text-[16px] leading-6 text-[#ADB7BC]">
+                     <h4 className="w-full sm:w-[248px] mt-3 font-pub font-normal text-[14px] sm:text-[16px] leading-6 text-[#ADB7BC]">
                         4517 Washington Ave. Manchester, Kentucky 39495
                      </h4>
-                     <h4 className="w-[248px] mt-3 font-pub font-medium text-[16px] leading-6 text-[#FFFFFF]">
+                     <h4 className="w-full sm:w-[248px] mt-3 font-pub font-medium text-[14px] sm:text-[16px] leading-6 text-[#FFFFFF] hover-brighten transition-smooth cursor-pointer">
                         info@kinbo.com
                      </h4>
                   </div>
                </div>
 
-               <div className="w-[200px]">
-                  <h3 className="font-pub font-medium text-[16px] leading-6 text-[#FFFFFF]">
+               <div className="w-full sm:w-[200px] animate-fadeInUp stagger-2">
+                  <h3 className="font-pub font-medium text-[14px] sm:text-[16px] leading-6 text-[#FFFFFF]">
                      TOP CATEGORY
                   </h3>
                   <ul className="mt-3">
@@ -65,8 +65,8 @@ const Footer = () => {
                   </ul>
                </div>
 
-               <div className="w-[200px]">
-                  <h3 className="font-pub font-medium text-[16px] leading-6 text-[#FFFFFF]">
+               <div className="w-full sm:w-[200px] animate-fadeInUp stagger-3">
+                  <h3 className="font-pub font-medium text-[14px] sm:text-[16px] leading-6 text-[#FFFFFF]">
                      QUICK LINKS
                   </h3>
                   <ul className="mt-3">
@@ -94,35 +94,35 @@ const Footer = () => {
                   </ul>
                </div>
 
-               <div className="w-[200px]">
-                  <h3 className=" font-pub font-medium text-[16px] leading-6 text-[#FFFFFF]">
+               <div className="w-full sm:w-[200px]">
+                  <h3 className=" font-pub font-medium text-[14px] sm:text-[16px] leading-6 text-[#FFFFFF]">
                      DOWNLOAD APP
                   </h3>
-                  <div className="mt-[18px] w-[176px]">
+                  <div className="mt-[18px] w-full sm:w-[176px]">
                      <div className="px-5 py-4 flex items-center gap-4 bg-[#303639] rounded-[3px]">
-                        <img src={GooglePlay} alt="Google_Play_logo" />
+                        <img src={GooglePlay} alt="Google_Play_logo" className="w-8" />
                         <div>
                            <Link
                               to="https://play.google.com/store/games?hl=en"
                               target="_black"
-                              className="font-int font-normal text-[11px] leading-[13px] text-[#FFFFFF] hover:underline cursor-pointer">
+                              className="font-int font-normal text-[10px] sm:text-[11px] leading-[13px] text-[#FFFFFF] hover:underline cursor-pointer">
                               Get it now
                            </Link>
-                           <h3 className="mt-1 font-int font-semibold text-[14px] leading-5 text-[#FFFFFF]">
+                           <h3 className="mt-1 font-int font-semibold text-[12px] sm:text-[14px] leading-5 text-[#FFFFFF]">
                               Google Play
                            </h3>
                         </div>
                      </div>
                      <div className="mt-3 px-5 py-4 flex items-center gap-4 bg-[#303639] rounded-[3px]">
-                        <img src={Apple} alt="Apple_logo" />
+                        <img src={Apple} alt="Apple_logo" className="w-8" />
                         <div>
                            <Link
                               to="https://www.apple.com/app-store/"
                               target="_blank"
-                              className="font-int font-normal text-[11px] leading-[13px] text-[#FFFFFF] hover:underline cursor-pointer">
+                              className="font-int font-normal text-[10px] sm:text-[11px] leading-[13px] text-[#FFFFFF] hover:underline cursor-pointer">
                               Get it now
                            </Link>
-                           <h3 className="mt-1 font-int font-semibold text-[14px] leading-5 text-[#FFFFFF]">
+                           <h3 className="mt-1 font-int font-semibold text-[12px] sm:text-[14px] leading-5 text-[#FFFFFF]">
                               App Store
                            </h3>
                         </div>
@@ -130,8 +130,8 @@ const Footer = () => {
                   </div>
                </div>
 
-               <div className="w-[330px]">
-                  <h3 className="font-pub font-medium text-[16px] leading-6 text-[#FFFFFF]">
+               <div className="w-full sm:w-[330px]">
+                  <h3 className="font-pub font-medium text-[14px] sm:text-[16px] leading-6 text-[#FFFFFF]">
                      Popular Tag
                   </h3>
 

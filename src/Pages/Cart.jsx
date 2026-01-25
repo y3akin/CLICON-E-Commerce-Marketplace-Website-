@@ -27,66 +27,66 @@ const Cart = () => {
 
    return (
       <section>
-         <div className="bg-[#F2F4F5] py-[26px]">
-            <div className="w-[1320px] mx-auto flex items-center gap-2">
+         <div className="bg-[#F2F4F5] py-[26px] animate-slideInDown">
+            <div className="w-full max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center gap-2">
                <Link
                   to="/"
-                  className="font-int text-[14px] text-[#666666] flex items-center gap-2 hover:text-[#2DA5F3]">
+                  className="font-int text-[12px] sm:text-[14px] text-[#666666] flex items-center gap-2 hover:text-[#2DA5F3] hover-scale transition-smooth">
                   <IoHomeOutline /> Home
                </Link>
                <MdKeyboardArrowRight className="text-[#666666]" />
-               <span className="text-[#2DA5F3] text-[14px]">Cart</span>
+               <span className="text-[#2DA5F3] text-[12px] sm:text-[14px]">Cart</span>
             </div>
          </div>
 
          <Container>
-            <div className="flex my-[72px] items-start justify-between ">
-               <div className="w-[872px] border border-[#E4E7E9] rounded-[5px]">
-                  <div className="flex justify-between px-6 py-5  border-b border-[#E4E7E9]">
-                     <h2 className="font-pub text-[18px] font-medium leading-6 text-mtext">
+            <div className="flex flex-col lg:flex-row my-[40px] sm:my-[72px] items-start justify-between gap-6 animate-fadeIn">
+               <div className="w-full lg:w-[872px] border border-[#E4E7E9] rounded-[5px] hover-lift transition-smooth overflow-x-auto">
+                  <div className="flex justify-between px-4 sm:px-6 py-5 border-b border-[#E4E7E9]">
+                     <h2 className="font-pub text-[16px] sm:text-[18px] font-medium leading-6 text-mtext">
                         Shopping Cart
                      </h2>
                   </div>
 
                   {cart.length === 0 ? (
-                     <div className="py-20 text-center">
-                        <h3 className="text-[22px] font-semibold mb-4">
+                     <div className="py-20 text-center animate-fadeInUp">
+                        <h3 className="text-[18px] sm:text-[22px] font-semibold mb-4">
                            Your cart is empty
                         </h3>
-                        <p className="text-[#77878F] mb-6">
+                        <p className="text-[#77878F] mb-6 text-[14px] sm:text-[16px]">
                            Zero items. Zero regrets. Fix it by shopping.
                         </p>
                         <Link
                            to="/shop"
-                           className="font-pub font-bold text-[14px] leading-12 tracking-[1.2%] text-[#2DA5F3] border-2 border-[#2DA5F3] hover:bg-[#2DA5F3] hover:text-white transition-all duration-300 px-8 py-3 rounded cursor-pointer">
+                           className="font-pub font-bold text-[12px] sm:text-[14px] leading-12 tracking-[1.2%] text-[#2DA5F3] border-2 border-[#2DA5F3] hover:bg-[#2DA5F3] hover:text-white transition-all duration-300 px-6 sm:px-8 py-2 sm:py-3 rounded cursor-pointer btn-primary hover-lift inline-block">
                            Go to Shop
                         </Link>
                      </div>
                   ) : (
                      <>
-                        <table className="w-full ">
+                        <table className="w-full animate-fadeIn min-w-max">
                            <thead>
                               <tr className="bg-[#F2F4F5]">
-                                 <th className="font-pub font-medium text-[14px] text-[#475156] px-6 py-4 text-left">
+                                 <th className="font-pub font-medium text-[12px] sm:text-[14px] text-[#475156] px-3 sm:px-6 py-4 text-left">
                                     PRODUCT
                                  </th>
-                                 <th className="font-pub font-medium text-[14px] text-[#475156] px-6 py-4 text-left">
+                                 <th className="font-pub font-medium text-[12px] sm:text-[14px] text-[#475156] px-3 sm:px-6 py-4 text-left">
                                     PRICE
                                  </th>
-                                 <th className="font-pub font-medium text-[14px] text-[#475156] px-6 py-4 text-left">
+                                 <th className="font-pub font-medium text-[12px] sm:text-[14px] text-[#475156] px-3 sm:px-6 py-4 text-left">
                                     QUANTITY
                                  </th>
-                                 <th className="font-pub font-medium text-[14px] text-[#475156] px-6 py-4 text-left">
+                                 <th className="font-pub font-medium text-[12px] sm:text-[14px] text-[#475156] px-3 sm:px-6 py-4 text-left">
                                     SUBTOTAL
                                  </th>
                               </tr>
                            </thead>
                            <tbody className="border-b border-[#E4E7E9]">
                               {cart.map((item) => (
-                                 <tr key={item.id}>
+                                 <tr key={item.id} className="animate-fadeInUp hover:bg-[#F9F9F9] transition-colors duration-200">
                                     <td className="px-6 py-6 flex gap-4 items-center ">
                                        <button
-                                          className="text-[#929FA5] border border-[#929FA5] hover:border-red-600 hover:text-red-600 rounded-full cursor-pointer"
+                                          className="text-[#929FA5] border border-[#929FA5] hover:border-red-600 hover:text-red-600 rounded-full cursor-pointer hover-scale transition-smooth active:animate-shake"
                                           onClick={() =>
                                              removeFromCart(item.id)
                                           }>
@@ -95,9 +95,9 @@ const Cart = () => {
                                        <img
                                           src={item.images?.[0]}
                                           alt={item.title}
-                                          className="w-20 h-20 object-cover"
+                                          className="w-20 h-20 object-cover hover-scale transition-smooth rounded"
                                        />
-                                       <div>
+                                       <div className="hover-brighten transition-smooth">
                                           <p className="font-medium">
                                              {item.title}
                                           </p>
@@ -106,13 +106,13 @@ const Cart = () => {
                                           </p>
                                        </div>
                                     </td>
-                                    <td className="px-6 py-4">
+                                    <td className="px-6 py-4 font-semibold text-[#FA8232]">
                                        ${item.price.toFixed(2)}
                                     </td>
                                     <td className="px-6 py-4">
-                                       <div className="flex items-center justify-center gap-4 border border-[#929FA5] text-[18px] w-[148px] h-10">
+                                       <div className="flex items-center justify-center gap-4 border border-[#929FA5] text-[18px] w-[148px] h-10 rounded hover-lift transition-smooth">
                                           <button
-                                             className="text-[20px] text-[#191C1F] hover:text-[#929FA5] cursor-pointer"
+                                             className="text-[20px] text-[#191C1F] hover:text-[#FA8232] cursor-pointer hover-scale transition-smooth"
                                              onClick={() =>
                                                 updateQuantity(
                                                    item.id,
@@ -121,9 +121,9 @@ const Cart = () => {
                                              }>
                                              -
                                           </button>
-                                          <span>{item.quantity}</span>
+                                          <span className="font-semibold">{item.quantity}</span>
                                           <button
-                                             className="text-[20px] text-[#191C1F] hover:text-[#929FA5] cursor-pointer cursor-pointer"
+                                             className="text-[20px] text-[#191C1F] hover:text-[#FA8232] cursor-pointer hover-scale transition-smooth"
                                              onClick={() =>
                                                 updateQuantity(
                                                    item.id,
@@ -134,7 +134,7 @@ const Cart = () => {
                                           </button>
                                        </div>
                                     </td>
-                                    <td className="px-6 py-4">
+                                    <td className="px-6 py-4 font-bold text-[#2DA5F3]">
                                        $
                                        {(item.price * item.quantity).toFixed(2)}
                                     </td>
@@ -144,7 +144,7 @@ const Cart = () => {
                            <div className="p-6">
                               <Link
                                  to="/shop"
-                                 className="flex items-center justify-center gap-3 font-pub font-bold text-[14px] leading-12 tracking-[1.2%] text-[#2DA5F3] border-2 border-[#2DA5F3] rounded px-0.5 py-px hover:bg-[#2DA5F3] hover:text-white transition-all duration-300">
+                                 className="flex items-center justify-center gap-3 font-pub font-bold text-[14px] leading-12 tracking-[1.2%] text-[#2DA5F3] border-2 border-[#2DA5F3] rounded px-0.5 py-px hover:bg-[#2DA5F3] hover:text-white transition-all duration-300 btn-primary hover-lift active:animate-jelly">
                                  <FaArrowLeftLong /> Return to Shop
                               </Link>
                            </div>

@@ -4,20 +4,20 @@ import Logo from "../assets/logo2.png"
 
 const Registration = () => {
    return (
-      <div className="bg-slate-50 flex items-center md:h-screen p-4">
+      <div className="bg-[#F2F4F5] flex items-center md:h-screen p-4 min-h-screen animate-fadeIn">
          <div className="w-full max-w-3xl max-md:max-w-xl mx-auto">
-            <div className="bg-white grid md:grid-cols-2 gap-10 w-full sm:p-8 p-6 shadow-md rounded-md overflow-hidden">
-               <div className="max-md:order-1 space-y-6">
-                  <div className="md:mb-16 mb-8 flex items-center gap-2">
+            <div className="bg-white grid md:grid-cols-2 gap-10 w-full sm:p-8 p-6 shadow-sm rounded-lg overflow-hidden border border-[#E4E7E9] hover-lift transition-smooth">
+               <div className="max-md:order-1 space-y-6 animate-fadeInLeft">
+                  <div className="md:mb-16 mb-8 flex items-center gap-2 hover-scale transition-smooth">
                      <img src={Logo} alt="logo" />
-                     <h2 className="font-pub text-[32px] font-bold leading-10 tracking-[-1%]">
+                     <h2 className="font-pub text-[32px] font-bold leading-10 tracking-[-1%] text-[#191C1F]">
                         CLICON
                      </h2>
                   </div>
                   <div className="space-y-4">
                      <button
                         type="button"
-                        className="px-4 py-2.5 flex items-center justify-center cursor-pointer rounded-md text-white text-sm font-medium tracking-wider border-none outline-none bg-blue-600 hover:bg-blue-700">
+                        className="px-4 py-2.5 flex items-center justify-center cursor-pointer rounded-md text-white text-sm font-medium tracking-wider border-none outline-none bg-[#2DA5F3] hover:bg-[#1e8dc7] transition-all duration-300 btn-primary hover-lift active:animate-jelly">
                         <svg
                            xmlns="http://www.w3.org/2000/svg"
                            width="22px"
@@ -33,7 +33,7 @@ const Registration = () => {
                      </button>
                      <button
                         type="button"
-                        className="px-4 py-2.5 flex items-center justify-center cursor-pointer rounded-md text-slate-900 text-sm font-medium tracking-wider border-none outline-none bg-slate-100 hover:bg-slate-200">
+                        className="px-4 py-2.5 flex items-center justify-center cursor-pointer rounded-md text-[#191C1F] text-sm font-medium tracking-wider border border-[#E4E7E9] outline-none bg-[#F2F4F5] hover:bg-[#E4E7E9] transition-all duration-300 btn-primary hover-lift active:animate-jelly">
                         <svg
                            xmlns="http://www.w3.org/2000/svg"
                            width="22px"
@@ -75,7 +75,7 @@ const Registration = () => {
                      </button>
                      <button
                         type="button"
-                        className="px-4 py-2.5 flex items-center justify-center cursor-pointer rounded-md text-white text-sm font-medium tracking-wider border-none outline-none bg-black hover:bg-[#222]">
+                        className="px-4 py-2.5 flex items-center justify-center cursor-pointer rounded-md text-white text-sm font-medium tracking-wider border-none outline-none bg-[#191C1F] hover:bg-[#0d0e0f] transition-all duration-300 btn-primary hover-lift active:animate-jelly">
                         <svg
                            xmlns="http://www.w3.org/2000/svg"
                            width="22px"
@@ -91,15 +91,15 @@ const Registration = () => {
                      </button>
                   </div>
                </div>
-               <form className="w-full">
-                  <div className="mb-8">
-                     <h2 className="text-slate-900 text-2xl font-medium">
+               <form className="w-full animate-fadeInRight">
+                  <div className="mb-8 animate-fadeInUp stagger-1">
+                     <h2 className="text-[#191C1F] text-2xl font-pub font-bold">
                         Register
                      </h2>
                   </div>
                   <div className="space-y-6">
                      <div>
-                        <label className="text-slate-900 text-sm font-medium mb-2 block">
+                        <label className="text-[#191C1F] text-sm font-int font-medium mb-2 block">
                            Name
                         </label>
                         <div className="relative flex items-center">
@@ -107,7 +107,7 @@ const Registration = () => {
                               name="name"
                               type="text"
                               required=""
-                              className="bg-white border border-slate-300 w-full text-sm text-slate-900 pl-4 pr-10 py-2.5 rounded-md outline-blue-500"
+                              className="bg-white border border-[#E4E7E9] w-full text-sm text-[#191C1F] pl-4 pr-10 py-2.5 rounded-md outline-none focus:border-[#2DA5F3] focus:ring-1 focus:ring-[#2DA5F3]"
                               placeholder="Enter name"
                            />
                            <svg
@@ -130,7 +130,7 @@ const Registration = () => {
                         </div>
                      </div>
                      <div>
-                        <label className="text-slate-900 text-sm font-medium mb-2 block">
+                        <label className="text-[#191C1F] text-sm font-int font-medium mb-2 block">
                            Email Id
                         </label>
                         <div className="relative flex items-center">
@@ -138,7 +138,7 @@ const Registration = () => {
                               name="email"
                               type="email"
                               required=""
-                              className="bg-white border border-slate-300 w-full text-sm text-slate-900 pl-4 pr-10 py-2.5 rounded-md outline-blue-500"
+                              className="bg-white border border-[#E4E7E9] w-full text-sm text-[#191C1F] pl-4 pr-10 py-2.5 rounded-md outline-none focus:border-[#2DA5F3] focus:ring-1 focus:ring-[#2DA5F3]"
                               placeholder="Enter email"
                            />
                            <svg
@@ -176,7 +176,7 @@ const Registration = () => {
                         </div>
                      </div>
                      <div>
-                        <label className="text-slate-900 text-sm font-medium mb-2 block">
+                        <label className="text-[#191C1F] text-sm font-int font-medium mb-2 block">
                            Password
                         </label>
                         <div className="relative flex items-center">
@@ -184,7 +184,7 @@ const Registration = () => {
                               name="password"
                               type="password"
                               required=""
-                              className="bg-white border border-slate-300 w-full text-sm text-slate-900 pl-4 pr-10 py-2.5 rounded-md outline-blue-500"
+                              className="bg-white border border-[#E4E7E9] w-full text-sm text-[#191C1F] pl-4 pr-10 py-2.5 rounded-md outline-none focus:border-[#2DA5F3] focus:ring-1 focus:ring-[#2DA5F3]"
                               placeholder="Enter password"
                            />
                            <svg
@@ -205,15 +205,15 @@ const Registration = () => {
                            id="remember-me"
                            name="remember-me"
                            type="checkbox"
-                           className="h-4 w-4 shrink-0 text-blue-600 focus:ring-blue-500 border-slate-300 rounded-md"
+                           className="h-4 w-4 shrink-0 text-[#2DA5F3] focus:ring-[#2DA5F3] border-[#E4E7E9] rounded-md"
                         />
                         <label
                            htmlFor="remember-me"
-                           className="text-slate-600 ml-3 block text-sm">
+                           className="text-[#5F6368] font-int ml-3 block text-sm">
                            I accept the{" "}
                            <a
                               href="javascript:void(0);"
-                              className="text-blue-600 font-medium hover:underline ml-1">
+                              className="text-[#2DA5F3] font-medium hover:text-[#1e8dc7]">
                               Terms and Conditions
                            </a>
                         </label>
@@ -222,16 +222,15 @@ const Registration = () => {
                   <div className="!mt-8">
                      <button
                         type="button"
-                        className="w-full py-2.5 px-4 text-sm font-medium tracking-wider cursor-pointer rounded-md bg-blue-600 hover:bg-blue-700 text-white focus:outline-none">
+                        className="w-full py-2.5 px-4 text-sm font-int font-semibold tracking-wider cursor-pointer rounded-md bg-[#FA8232] hover:bg-[#e67e1f] text-white focus:outline-none transition-colors">
                         Create Account
                      </button>
                   </div>
-                  <p className="text-slate-600 text-sm mt-4 text-left">
+                  <p className="text-[#5F6368] font-int text-sm mt-6 text-center">
                      Already have an account?{" "}
                      <Link
-                        to=""
-                        href="javascript:void(0);"
-                        className="text-blue-600 font-medium hover:underline ml-1">
+                        to="/"
+                        className="text-[#2DA5F3] font-semibold hover:text-[#1e8dc7]">
                         Login here
                      </Link>
                   </p>

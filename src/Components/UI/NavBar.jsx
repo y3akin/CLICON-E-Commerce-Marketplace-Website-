@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
+import { ProductContext } from "../../Context/ProductContext";
 import Container from "../../Layouts/Container";
 import Flex from "./Flex";
 import Logo from "../../assets/logo.png";
@@ -29,7 +30,9 @@ import { TbPhoneCall } from "react-icons/tb";
 const NavBar = () => {
    let [more, setMore] = useState(false);
    let [phoneMore, setPhoneMore] = useState(false);
-   
+   const { favorites, cart } = useContext(ProductContext);
+   const favCount = Object.keys(favorites || {}).length;
+   const cartCount = cart?.length || 0;
 
    useEffect(() => {
       if (!more) {
@@ -75,7 +78,8 @@ const NavBar = () => {
    };
 
    return (
-      <nav className="z-9999">
+      <>
+      <nav className=" bg-white">
          {/* Welcome Part */}
          <div className="bg-[#1B6392] text-white font-pub border-b border-[#5E91B2]">
             <Container>
@@ -114,7 +118,7 @@ const NavBar = () => {
          </div>
 
          {/* NavLogo */}
-         <div className="bg-[#1B6392] text-white font-pub">
+         <div className="bg-[#1B6392] text-white font-pub ">
             <Container>
                <Flex className="justify-between py-5">
                   <Link
@@ -138,8 +142,22 @@ const NavBar = () => {
 
                   {/* shop & login icon */}
                   <div className="flex items-center gap-6 relative">
-                     <Link to="/cart"><MdOutlineShoppingCart className="text-[32px] cursor-pointer hover:text-[#a3c3ca] transition-all duration-200" /></Link>
-                     <FaRegHeart className="text-[32px] cursor-pointer hover:text-[#a3c3ca] transition-all duration-200" />
+                     <Link to="/cart" className="relative">
+                        <MdOutlineShoppingCart className="text-[32px] cursor-pointer hover:text-[#a3c3ca] transition-all duration-200" />
+                        {cartCount > 0 && (
+                           <span className="absolute -top-2 -right-2 bg-[#FA8232] text-white text-[10px] font-pub font-bold w-5 h-5 rounded-full flex items-center justify-center">
+                              {cartCount}
+                           </span>
+                        )}
+                     </Link>
+                     <Link to="/favorites" className="relative">
+                        <FaRegHeart className="text-[32px] cursor-pointer hover:text-[#a3c3ca] transition-all duration-200" />
+                        {favCount > 0 && (
+                           <span className="absolute -top-2 -right-2 bg-[#FA8232] text-white text-[10px] font-pub font-bold w-5 h-5 rounded-full flex items-center justify-center">
+                              {favCount}
+                           </span>
+                        )}
+                     </Link>
                      <AiOutlineUser
                         className="text-[32px] cursor-pointer hover:text-[#a3c3ca] transition-all duration-200"
                         onClick={() => setLogin(!login)}
@@ -224,7 +242,8 @@ const NavBar = () => {
             </Container>
          </div>
 
-         <div className="border-b border-[#E4E7E9] bg-[#FFFFFF]">
+      </nav>
+         <div className="border-b border-[#E4E7E9] bg-[#FFFFFF] sticky top-0 z-999 shadow-md">
             <Container>
                <Flex className="justify-between py-4">
                   <div className="relative">
@@ -348,7 +367,7 @@ const NavBar = () => {
                </Flex>
             </Container>
          </div>
-      </nav>
+         </>
    );
 };
 

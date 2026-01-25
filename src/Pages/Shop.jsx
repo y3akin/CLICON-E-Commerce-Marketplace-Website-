@@ -12,33 +12,28 @@ import { Link } from "react-router-dom";
 import { MdKeyboardArrowRight } from "react-icons/md";
 
 const Shop = () => {
-  const { product, addToCart } = useContext(ProductContext);
-
-  const [favIcon, setFavIcon] = useState({});
-  const toggleFav = (id) => {
-    setFavIcon((prev) => ({ ...prev, [id]: !prev[id] }));
-  };
+   const { product, addToCart, favorites, toggleFavorite } = useContext(ProductContext);
 
   return (
-    <section>
-      <div className="bg-[#F2F4F5] py-[26px]">
-        <div className="w-[1320px] mx-auto flex items-center gap-2">
-          <Link to="/" className="font-int text-[14px] text-[#666666] leading-5 flex items-center gap-2 hover:underline hover:text-[#2DA5F3] transition-all duration-300">
-            <IoHomeOutline /> Home
+    <section className="animate-fadeIn">
+      <div className="bg-[#F2F4F5] py-[16px] sm:py-[20px] md:py-[26px] animate-slideInDown">
+        <div className="w-full max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center gap-2">
+          <Link to="/" className="font-int text-[11px] sm:text-[12px] md:text-[14px] text-[#666666] leading-4 sm:leading-5 flex items-center gap-2 hover:underline hover:text-[#2DA5F3] transition-all duration-300 hover-scale">
+            <IoHomeOutline className="text-xs sm:text-sm" /> Home
           </Link>
-          <MdKeyboardArrowRight className="text-[14px] text-[#666666]" />
-          <Link to="/shop" className="font-int text-[14px] text-[#2DA5F3] leading-5">Shop</Link>
+          <MdKeyboardArrowRight className="text-[11px] sm:text-[12px] md:text-[14px] text-[#666666]" />
+          <Link to="/shop" className="font-int text-[11px] sm:text-[12px] md:text-[14px] text-[#2DA5F3] leading-4 sm:leading-5">Shop</Link>
         </div>
       </div>
 
       <Container>
-        <div className="flex items-start gap-6 pt-10 pb-18">
-<div className="w-[312px] flex flex-col gap-6">
-                  <div className="border-b border-[#E4E7E9] pb-6">
-                     <h2 className="font-pub font-medium text-[16px] leading-6 text-mtext">
+        <div className="flex flex-col lg:flex-row items-start gap-3 md:gap-4 lg:gap-6 pt-4 sm:pt-6 md:pt-8 lg:pt-10 pb-12 md:pb-16 lg:pb-18">
+<div className="w-full lg:w-[312px] flex flex-col gap-3 md:gap-4 lg:gap-6 animate-fadeInLeft">
+                  <div className="border-b border-[#E4E7E9] pb-3 md:pb-4 lg:pb-6 hover-lift transition-smooth">
+                     <h2 className="font-pub font-medium text-[12px] sm:text-[14px] md:text-[15px] lg:text-[16px] leading-5 md:leading-6 text-mtext">
                         CATEGORY
                      </h2>
-                     <div className="mt-4 flex flex-col gap-3">
+                     <div className="mt-3 flex flex-col gap-2 md:gap-3">
                         <ShopCatg
                            id="electdiv"
                            htmlFor="electdiv"
@@ -102,7 +97,7 @@ const Shop = () => {
                      </div>
                   </div>
 
-                  <div className="mt-6 border-b border-[#E4E7E9] pb-6">
+                  <div className="mt-6 border-b border-[#E4E7E9] pb-6 hover-lift transition-smooth">
                      <h2 className="font-pub font-medium text-[16px] leading-6 text-mtext">
                         PRICE RANGE
                      </h2>
@@ -201,44 +196,46 @@ const Shop = () => {
                      </div>
                   </div>
                </div>
-          <div className="flex-1">
+          <div className="flex-1 animate-fadeInRight">
             <div className="grid grid-cols-4 gap-4">
-              {product.map((item) => (
+              {product.map((item, idx) => (
                 <div
                   key={item.id}
-                  className="h-80 max-w-[234px] bg-[#FFFFFF] border border-[#E4E7E9] rounded-sm p-4 hover:shadow-[0px_8px_24px_0px_rgba(25,28,31,0.12)] transition-all duration-300 flex flex-col"
+                  className={`h-80 max-w-[234px] bg-[#FFFFFF] border border-[#E4E7E9] rounded-sm p-4 hover:shadow-[0px_8px_24px_0px_rgba(25,28,31,0.12)] transition-all duration-300 flex flex-col animate-fadeInUp hover-lift ${["stagger-1", "stagger-2", "stagger-3", "stagger-4", "stagger-5", "stagger-6"][idx % 6]}`}
                 >
-                  <div className="w-[202px] h-[172px] relative group">
-                    <img src={item.images[0]} alt={item.title} className="h-[172px] p-2 mx-auto" />
-                    <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 hover:bg-[#00000020] transition-opacity duration-300">
+                  <div className="w-[202px] h-[172px] relative group hover-scale transition-smooth">
+                    <img src={item.images[0]} alt={item.title} className="h-[172px] p-2 mx-auto hover-scale transition-smooth" />
+                    <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 hover:bg-[#00000020] transition-opacity duration-300 animate-fadeIn">
+                                 <div
+                                    className={`w-12 h-12 rounded-full flex items-center justify-center cursor-pointer hover-scale transition-smooth ${
+                                       favorites[item.id] ? "bg-[#FA8232] text-white" : "bg-white text-mtext hover:bg-[#FA8232] hover:text-white"
+                                    }`}
+                                    onClick={() => toggleFavorite(item)}
+                                 >
+                                    {favorites[item.id] ? <GoHeartFill className="text-[24px] animate-heartBeat" /> : <GoHeart className="text-[24px]" />}
+                                 </div>
                       <div
-                        className={`w-12 h-12 rounded-full flex items-center justify-center cursor-pointer ${
-                          favIcon[item.id] ? "bg-[#FA8232] text-white" : "bg-white text-mtext hover:bg-[#FA8232] hover:text-white"
-                        }`}
-                        onClick={() => toggleFav(item.id)}
-                      >
-                        {favIcon[item.id] ? <GoHeartFill className="text-[24px]" /> : <GoHeart className="text-[24px]" />}
-                      </div>
-                      <div
-                        className="w-12 h-12 rounded-full bg-white text-mtext flex items-center justify-center hover:bg-[#FA8232] hover:text-white cursor-pointer"
+                        className="w-12 h-12 rounded-full bg-white text-mtext flex items-center justify-center hover:bg-[#FA8232] hover:text-white cursor-pointer transition-all duration-300 hover-scale active:animate-jelly"
                         onClick={() => addToCart(item)}
                       >
                         <FiShoppingCart className="text-[24px]" />
                       </div>
-                      <div className="w-12 h-12 rounded-full bg-white text-mtext flex items-center justify-center hover:bg-[#FA8232] hover:text-white cursor-pointer">
+                      <Link
+                        to={`/product/${item.id}`}
+                        className="w-12 h-12 rounded-full bg-white text-mtext flex items-center justify-center hover:bg-[#FA8232] hover:text-white cursor-pointer transition-all duration-300 hover-scale active:animate-jelly">
                         <FiEye className="text-[24px]" />
-                      </div>
+                      </Link>
                     </div>
                   </div>
 
-                  <div className="mt-6">
+                  <div className="mt-6 animate-fadeIn">
                     <div className="flex items-center gap-1">
                       <div className="flex text-[#FA8232]">
-                        <IoStar /><IoStar /><IoStar /><IoStar /><IoStarHalf />
+                        <IoStar className="hover-scale transition-smooth" /><IoStar className="hover-scale transition-smooth" /><IoStar className="hover-scale transition-smooth" /><IoStar className="hover-scale transition-smooth" /><IoStarHalf className="hover-scale transition-smooth" />
                       </div>
                       <span className="text-[12px] text-[#77878F]">({item.rating})</span>
                     </div>
-                    <h3 className="mt-2 text-[14px] line-clamp-2">{item.title}</h3>
+                    <h3 className="mt-2 text-[14px] line-clamp-2 hover-brighten transition-smooth cursor-pointer">{item.title}</h3>
                     <div className="flex items-center gap-1 mt-2">
                       <del className="text-[14px] text-[#929FA5]">${item.price}</del>
                       <span className="text-[14px] font-semibold text-[#2DA5F3]">
